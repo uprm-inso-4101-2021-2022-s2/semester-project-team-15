@@ -1,49 +1,216 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
     box-sizing: border-box;
 }
 
-body{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url(../Images/the-ultimate-hamburger.webp);
-    background-size: cover;
-    background-position: center;
-    font-family: 'roboto', sans-serif;
+body {
+    margin: 0;
+    padding: 0;
 }
-.container{
-    position: relative;
-    width: 90%;
-    height: 87vh;
-    border: 5px solid #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
 }
-.logout{
-    position: absolute;
-    top: 10px;
-    right: 0;
-    padding: 10px 20px;
-    text-transform: capitalize;
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
     font-size: 16px;
-    color: #fff;
-    background: none;
-    text-decoration: underline;
-    cursor: pointer;
-    outline: none;
-    border: none;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
-.greeting{
-    font-family: 'dosis';
-    font-size: 100px;
-    color: #fff;
-    font-weight: 800;
-    text-transform: capitalize;
+
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit;
+    /* Important for vertical align on mobile phones */
+    margin: 0;
+    /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Mega Menu header, if needed */
+.dropdown-content .header {
+    background: #dae10c;
+    padding: 16px;
+    color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    background-color: #ccc;
+    height: 250px;
+}
+
+/* Style links inside the columns */
+/* .column a {
+    float: none;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+} */
+
+.column a img{
+    height: 125px;
+    width: 125px;
+}
+
+/* Add a background color on hover */
+.column a:hover {
+    background-color: transparent;
+    transform: translateY(-5px);
+}
+
+.row a img {
+    height: 125px;
+    width: 125px;
+}
+
+/* Add a background color on hover */
+.row a:hover {
+    background-color: transparent;
+    transform: translateY(-5px);
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* ------------------------------------------------------- */
+/* Slideshow container */
+.slideshow-container {
+    max-height: 800px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+/* .prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+} */
+
+/* Position the "next button" to the right */
+/* .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+} */
+
+/* On hover, add a black background color with a little bit see-through */
+/* .prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+} */
+
+/* Caption text */
+.text {
+    color: red;
+    font-size: 50px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+/* .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+} */
+
+/* The dots/bullets/indicators */
+/* .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+} */
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
